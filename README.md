@@ -1,80 +1,65 @@
-# Job Application Tracking System
+# Job Application Tracker
 
-A desktop application to help you track and manage your job applications efficiently.
+A desktop application to help you track and manage your job applications.
 
 ## Features
 
-- **Add Job Opportunities**: Log details about job applications
-- **Track Application Status**: Update job status (Applied, Waiting, Interviewing, Rejected)
-- **Store Application Details**: Save company name, job title, application link, salary range, etc.
-- **Networking Contacts**: Store names and contact information for potential referrals
-- **Dashboard**: View statistics about your job search progress
-- **Local Storage**: All data is stored locally on your device
+- Add and manage job applications
+- Track application status (Applied, Waiting, Interviewing, Rejected)
+- Store networking contacts for each job
+- View application statistics on the dashboard
+- Local data storage for privacy
 
-## Technology Stack
+## Technologies Used
 
-- **Frontend**: Electron.js with HTML, CSS, and JavaScript
-- **Backend**: Node.js with Express.js
-- **Database**: SQLite for local data storage
+- Frontend: Electron.js with HTML, CSS, and JavaScript
+- Backend: Node.js with Express.js
+- Database: SQLite (local storage)
 
 ## Installation
 
-1. Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/job-application-tracker.git
+   cd job-application-tracker
+   ```
 
-2. Clone or download this repository.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-3. Open a terminal/command prompt in the project directory and run:
+3. Start the application:
+   ```
+   npm start
+   ```
 
-```bash
-npm install
-```
+## Database Setup
 
-This will install all the required dependencies.
-
-## Running the Application
-
-To start the application, run:
-
-```bash
-npm start
-```
-
-This will launch the Electron application with the job tracker interface.
+The application will automatically create a SQLite database in the `data` directory when it first runs. No additional setup is required.
 
 ## Development
 
-For development with auto-reload, run:
+### Project Structure
 
-```bash
-npm run dev
-```
+- `main.js` - Main Electron application file
+- `src/frontend/` - Frontend HTML, CSS, and JavaScript
+- `src/backend/` - Backend Express server and API routes
+- `data/` - SQLite database (not included in the repository)
 
-## Usage Guide
+### Adding New Features
 
-### Adding a Job Application
+1. Backend changes should be made in the `src/backend/` directory
+2. Frontend changes should be made in the `src/frontend/` directory
+3. Database schema changes should be made in `src/backend/database.js`
 
-1. Click the "Add New Job" button in the header.
-2. Fill in the job details form.
-3. Click "Save Job" to add the application to your tracker.
+## Contributing
 
-### Viewing Job Details
-
-Click on any job card in the list to view its complete details.
-
-### Adding Networking Contacts
-
-1. Open a job's details by clicking on its card.
-2. Click the "Add Contact" button in the Networking Contacts section.
-3. Fill in the contact information.
-4. Click "Save Contact" to add the contact to the job.
-
-### Filtering Jobs
-
-Use the dropdown menu and search box above the job list to filter jobs by status or search for specific companies/roles.
-
-## Data Storage
-
-All your data is stored locally in a SQLite database file located in the `data` directory of the application. No data is sent to any external servers.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
 
 ## License
 
