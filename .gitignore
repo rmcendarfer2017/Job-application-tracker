@@ -66,3 +66,6 @@ Desktop.ini
 
 # VS Code files
 .vscode/
+
+# Project specific files
+projectplan.md
